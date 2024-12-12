@@ -1,0 +1,28 @@
+<mat-toolbar color="primary" class="mat-elevation-z8">
+    <span>Jyotirmay</span>
+    <div class="spacer"></div>
+  
+    <!-- Full navigation for larger screens -->
+    <div class="nav-links" *ngIf="!isSmallScreen">
+      <a mat-button routerLink="Home">Home</a>
+      <a mat-button routerLink="Services">Services</a>
+      <a mat-button routerLink="Resume">Resume</a>
+      <a mat-button routerLink="Portfolio">Portfolio</a>
+      <a mat-button routerLink="Contact">Contact</a>
+    </div>
+  
+    <!-- Hamburger menu for smaller screens -->
+    <button mat-icon-button *ngIf="isSmallScreen" [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </mat-toolbar>
+  
+  <!-- Dropdown menu for smaller screens -->
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="Home">Home</button>
+    <button mat-menu-item routerLink="Services">Services</button>
+    <button mat-menu-item routerLink="Resume">Resume</button>
+    <button mat-menu-item routerLink="Portfolio">Portfolio</button>
+    <button mat-menu-item routerLink="Contact">Contact</button>
+  </mat-menu>
+  

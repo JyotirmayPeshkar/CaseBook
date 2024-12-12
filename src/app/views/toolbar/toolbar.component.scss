@@ -1,0 +1,21 @@
+/* Style for the spacer */
+.spacer {
+    flex: 1 1 auto;
+  }
+  
+  /* Hide menu button on larger screens */
+  mat-toolbar .mat-icon-button {
+    display: none;
+  }
+  
+  /* Media query for small screens */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+    
+    mat-toolbar .mat-icon-button {
+      display: block;
+    }
+  }
+  
