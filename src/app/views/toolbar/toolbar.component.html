@@ -1,23 +1,26 @@
-<mat-toolbar color="primary" class="mat-elevation-z8">
-    <span>Jyotirmay</span>
-    <div class="spacer"></div>
-  
-    <!-- Full navigation for larger screens -->
-    <div class="nav-links" *ngIf="!isSmallScreen">
-      <a mat-button routerLink="Home">Home</a>
-      <a mat-button routerLink="Services">Services</a>
-      <a mat-button routerLink="Resume">Resume</a>
-      <a mat-button routerLink="Portfolio">Portfolio</a>
-      <a mat-button routerLink="Contact">Contact</a>
-    </div>
-  
-    <!-- Hamburger menu for smaller screens -->
-    <button mat-icon-button *ngIf="isSmallScreen" [matMenuTriggerFor]="menu">
-      <mat-icon>menu</mat-icon>
-    </button>
-  </mat-toolbar>
-  
-  <!-- Dropdown menu for smaller screens -->
+<mat-toolbar color="primary" class="mat-elevation-z8 header">
+  <span class="logo">Jyotirmay</span>
+  <div class="spacer"></div>
+
+  <!-- Navigation links -->
+  <div class="nav-links" *ngIf="!isSmallScreen">
+    <nav>
+      <a mat-button routerLink="Home" routerLinkActive="active-link">Home</a>
+      <a mat-button routerLink="Services" routerLinkActive="active-link">Services</a>
+      <a mat-button routerLink="Resume" routerLinkActive="active-link">Resume</a>
+      <a mat-button routerLink="Portfolio" routerLinkActive="active-link">Portfolio</a>
+      <a mat-button routerLink="Contact" routerLinkActive="active-link">Contact</a>
+    </nav>
+  </div>
+
+  <!-- Hamburger menu for smaller screens -->
+  <button mat-icon-button *ngIf="isSmallScreen" [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+</mat-toolbar>
+
+<!-- Dropdown menu for smaller screens -->
+<nav>
   <mat-menu #menu="matMenu">
     <button mat-menu-item routerLink="Home">Home</button>
     <button mat-menu-item routerLink="Services">Services</button>
@@ -25,4 +28,4 @@
     <button mat-menu-item routerLink="Portfolio">Portfolio</button>
     <button mat-menu-item routerLink="Contact">Contact</button>
   </mat-menu>
-  
+</nav>

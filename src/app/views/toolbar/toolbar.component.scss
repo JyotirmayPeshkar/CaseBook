@@ -1,21 +1,60 @@
 /* Style for the spacer */
 .spacer {
-    flex: 1 1 auto;
-  }
-  
-  /* Hide menu button on larger screens */
-  mat-toolbar .mat-icon-button {
+  flex: 1 1 auto;
+}
+
+/* Hide menu button on larger screens */
+mat-toolbar .mat-icon-button {
+  display: none;
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+  .nav-links {
     display: none;
   }
-  
-  /* Media query for small screens */
-  @media (max-width: 768px) {
-    .nav-links {
-      display: none;
-    }
-    
-    mat-toolbar .mat-icon-button {
-      display: block;
-    }
+
+  mat-toolbar .mat-icon-button {
+    display: block;
   }
-  
+}
+
+:root {
+  --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --main-color: #7cf03d;
+  --white-color: #fff;
+  --disabled-color: #fff3;
+}
+
+.header {
+  background-color: #1f242d;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+nav a {
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 500;
+  margin-left: 1.5rem;
+  transition: .5s;
+}
+
+nav a:hover {
+  color: #7cf03d;
+
+}
+
+
+/* Active link styles */
+.active-link {
+  color: #7cf03d !important;
+  /* Change the color of the active route link */
+  font-weight: bold;
+  /* Optional: Make it bold for better visibility */
+}
